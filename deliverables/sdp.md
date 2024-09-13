@@ -14,17 +14,20 @@ We anticipate communicating via discord outside of meetings. We have commited to
 
 ![gantt](../assets/gantt-chart.png)
 
-- MVSs: A GUI application that displays an `instrument` and is playable.
+- MVSs: A GUI application that displays an piano and is playable.
 - Milestones (i.e., "Checkins"):
   - 9/22: Display a GUI
-  - 9/29: Display an `instrument`
-  - 10/6: Create `instrument` logic
-  - 10/13: Create interactability for the `instrument` between the front and back end.
-  - 11/10: Create a `instrument` music/song
-  - 11/17: Create `instrument` round based mode, Survial (bop-it mode)
+  - 9/29: Display a piano
+  - 10/6: Create piano logic
+  - 10/13: Create interactability for the piano between the front and back end.
+  - 11/10: Create a piano music/song
+  - 11/17: Create piano round based mode, Survial (bop-it mode)
   - 12/1: Create different play options menu (survial/song choose) for gui
 - Requirement Specification
   - 9/22: A GUI shall be created.
-  - 9/29: A `instrument` shall be displayed on the GUI.
-  - 10/13: A `instrument` shall be interactable on the GUI.
+  - 9/29: A piano shall be displayed on the GUI.
+  - 10/13: A piano shall be interactable on the GUI.
 - Design Specification
+  - 9/22: A GUI shall be created.
+  - 9/29: A piano shall be displayed on the GUI.
+  - 10/13: A piano shall be interactable on the
