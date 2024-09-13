@@ -22,7 +22,7 @@ We anticipate communicating via discord outside of meetings. We have commited to
   - 10/13: Create interactability for the piano between the front and back end.
   - 11/10: Create a piano music/song
   - 11/17: Create piano round based mode, Survial (bop-it mode)
-  - 12/1: Create different play options menu (survial/song choose) for gui
+  - 12/1: Create different play options menu (survial/song choose) for GUI
 - Requirement Specification
   - 9/22: A GUI shall be created.
   - 9/29: A piano shall be displayed on the GUI.
@@ -30,4 +30,4 @@ We anticipate communicating via discord outside of meetings. We have commited to
 - Design Specification
   - 9/22: A GUI shall be created.
   - 9/29: A piano shall be displayed on the GUI.
-  - 10/13: A piano shall be interactable on the
+  - 10/13: A piano shall be interactable on the GUI.
