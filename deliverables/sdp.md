@@ -8,7 +8,7 @@
 
 - Communication mechanism(s) for outside of meetings: Discord
 
-We anticipate communicating via discord outside of meetings. We have commited to responding within `1hr` timeframe.
+We anticipate communicating via Discord outside of meetings. We have committed to responding within `1hr` timeframe.
 
 ## Timeline
 
@@ -20,9 +20,9 @@ We anticipate communicating via discord outside of meetings. We have commited to
   - 9/29: Display a piano
   - 10/6: Create piano logic
   - 10/13: Create interactability for the piano between the front and back end.
-  - 11/10: Create a piano music/song
-  - 11/17: Create piano round based mode, Survial (bop-it mode)
-  - 12/1: Create different play options menu (survial/song choose) for GUI
+  - 11/10: Create a piano song/music database
+  - 11/17: Create piano round-based mode, Survival (Bop-It mode)
+  - 12/1: Create different play options menu (survival/song choice) for GUI
 - Requirement Specification
   - 9/22: A GUI shall be created.
   - 9/29: A piano shall be displayed on the GUI.
