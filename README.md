@@ -7,3 +7,5 @@ Jake Hamblin: Undergraduate CS/CEG Senior, transfer student. AS.CS from Sinclair
 Alexander Shampton: Undergraduate CS Senior
 
 Nicholas Latham: Undergraduate CS Senior
+
+Vaibhav Patel: Graduate (B.Tech Computer Science and Engineering with specialization in Artificial Intelligence)
