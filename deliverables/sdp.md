@@ -10,6 +10,14 @@
 
 We anticipate communicating via Discord outside of meetings. We have committed to responding within `1hr` timeframe.
 
+This is because we did not manage to find a good in-person meeting time during the weekday, but we plan on generally being accessable to each other outside the meeting time via Discord.
+
+### Project Management
+
+How to make decisions: Whenever someone comes across an issue, we will discuss it amongst ourselves.
+
+This decision was made because nobody wanted to be "in charge".
+
 ## Timeline
 
 ![gantt](../assets/gantt-chart.png)
