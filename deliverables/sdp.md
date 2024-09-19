@@ -16,7 +16,7 @@ This is because we did not manage to find a good in-person meeting time during t
 
 How to make decisions: Whenever someone comes across an issue, we will discuss it amongst ourselves.
 
-This decision was made because nobody wanted to be "in charge".
+This decision was made because nobody wanted to be "in charge". We decided that each milestone should take a week because that would take us to just before the last week of class.
 
 ## Timeline
 
