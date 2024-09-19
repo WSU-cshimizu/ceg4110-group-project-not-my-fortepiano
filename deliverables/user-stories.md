@@ -14,4 +14,4 @@ As a devloper, I want to have a GUI that is user friendly, sleek, and fully func
 
 As a developer, I want the interface to work with mouse, touchscreen, and QWERTY keyboard, so that the user may play our piano simulator on different devices.
 
-As a developer, I want to be able to use a midi library to play piano notes so it's easier to integrate with a midi player.
+As a developer, I want to be able to use a midi library to play piano notes so I don't have to implement a piano player from scratch.
