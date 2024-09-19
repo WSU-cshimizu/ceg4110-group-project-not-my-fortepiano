@@ -1,6 +1,6 @@
 # User Story Compendium
 ## User Stories
-## As a competitive gamer, I want to be challenged by other surival mode players' high score, even if I cannot beat their score. 
+### As a competitive gamer, I want to be challenged by other surival mode players' high scores, even if I cannot beat their scores. 
 ### As an aspiring musician, I want to be able to select and use the Free Play mode to experiment with writing my own music.
 ###
 ###
