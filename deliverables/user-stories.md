@@ -27,6 +27,7 @@ As a Developer, I want to test framework to verify functionality, validate score
 ## Tester Story
 
 Test the functionality of the 3 modes and the 5 scenarios 
+
      user selects Bop It/time trial -> user plays that mode -> user gets high score -> user enters their name to the leaderboard -> user is returned to menu. 
      user selects Bop It/time trial -> user plays that mode -> user does not get high score -> user is returned to menu. 
      user selects song mode -> user plays song -> user gets high score - user enters their name to the leaderboard - user is returned to menu. 
