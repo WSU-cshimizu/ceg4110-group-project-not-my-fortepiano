@@ -19,3 +19,5 @@ As a developer, I want the interface to work with mouse, touchscreen, and QWERTY
 As a developer, I want to be able to use a MIDI library to play piano notes, so I don't have to implement a piano player from scratch.
 
 As a developer, I want to create a timing and scoring system so I can properly assign high scores to users.
+
+##Tester Story
