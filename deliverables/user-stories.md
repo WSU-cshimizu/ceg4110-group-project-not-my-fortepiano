@@ -22,14 +22,16 @@ As a developer, I want to be able to use a MIDI library to play piano notes, so 
 
 As a developer, I want to create a timing and scoring system so I can properly assign high scores to users.
 
-As a Developer, I want to test framework to verify functionality, validate score tracking for high and low scores, and ensure smooth transitions with proper feedback across [Bop It], song, and free play modes.
+As a Developer, I want to test framework to verify functionality, validate score tracking for high and low scores, and ensure smooth transitions with proper feedback across survival mode, song, and free play modes.
 
 ## Tester Story
 
-Test the functionality of the 3 modes and the 5 scenarios 
+As a tester, I want to ensure the functionality of the three game modes (survival, song, and free play) and the five "happy path" scenarios that we have come up with, and correct any errors that may lead to a "sad path."
 
-     user selects Bop It/time trial -> user plays that mode -> user gets high score -> user enters their name to the leaderboard -> user is returned to menu. 
-     user selects Bop It/time trial -> user plays that mode -> user does not get high score -> user is returned to menu. 
-     user selects song mode -> user plays song -> user gets high score - user enters their name to the leaderboard - user is returned to menu. 
-     user selects song mode -> user plays song -> user does not get high score -> user is returned to menu. 
-     user selects free play mode -> user plays freely -> user quits free play mode -> user is returned to menu. 
+The five "happy paths" are:
+
+     1. user selects survival mode -> user plays survival mode -> user gets high score -> user enters their name to the leaderboard -> user is returned to menu. 
+     2. user selects survival mode -> user plays survival mode -> user does not get high score -> user is returned to menu. 
+     3. user selects song mode -> user plays song -> user gets high score - user enters their name to the leaderboard -> user is returned to menu. 
+     4. user selects song mode -> user plays song -> user does not get high score -> user is returned to menu. 
+     5. user selects free play mode -> user plays freely -> user quits free play mode -> user is returned to menu. 
