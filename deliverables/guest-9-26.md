@@ -12,4 +12,4 @@ A business analyst means different things at different companies. At DFL they ar
 
 A user story is a piece of work that a developer works on. Can be part of a larger feature or a stand-alone feature. The why is very important to developers and the acceptance criteria is a checklist of when requirements are complete. 
  
-How to get a job: network, good resume, interview prep, company research, and answer questions honestly. 
+How to get a job: Network, Good resume, Interview prep, Company research, and Answer questions honestly. 
