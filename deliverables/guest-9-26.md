@@ -5,7 +5,7 @@
 
 ## Pertinent Questions
 * What environment is software developed?
-* Question 2
+* What happens if the cost to ignore compliance is lower than the cost to implement changes to reach complaince?
 
 ## Lessons Learned
 A business analyst means different things at different companies. At DFL they are more on the technical side, management, qa group, and determine needs and facilitate solutions. A team lead is an experienced developer. Developers can work on large projects, smaller prioritized items, and bugs. Software Architects make large scale decision decisions. Decisions based on scalability, flexibility, business conditions, marked, and cost. Companies can be public or privately owned. Public requires more reporting to stakeholders. Time is money. Fines can be better than fixing the problem causing the fine. Most companies use Agile methodology. Agile is not a single thing, there are many ways to do it. Scrum is 2 week spring cycles, but is tough as a service industry.
