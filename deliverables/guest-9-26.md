@@ -15,10 +15,11 @@ maintain organized backlogs, hold Q&A groups, and determine user/customer needs 
 * Companies can be publicly or privately owned. Public ownership requires more reporting to stakeholders.
 * Time is money, and sometimes paying fines can be more expedient than fixing the problem causing the fine.
 * Most companies use Agile methodology. Agile is not a single thing, as there are many ways to do it.
-* Scrum consists of two-week planned development cycles, but it is difficult to use in service industries, as it can be slow to react to major disruptions.
+* One difference we noted was the mention of Scrum as a poor development model for DFL's needs, and the advantage of Kanban in limiting backlogs of unfinished work.
+  Scrum consists of two-week planned sprint cycles, but it is difficult to use in service industries, as it can be slow to react to major disruptions.
 * A user story is an important piece of work for developers that provides justification for development of features in a project.
 These can be part of a larger feature or stand-alone features. The reasoning of a user story is very important to developers,
-and the acceptance criteria is a checklist of when requirements are complete. 
+and the acceptance criteria is a checklist of when requirements are complete.
 
 How to get a job:
  1. Network
