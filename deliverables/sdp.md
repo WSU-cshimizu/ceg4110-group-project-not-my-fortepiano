@@ -31,11 +31,5 @@ This decision was made because nobody wanted to be "in charge". We decided that 
   - 11/10: Create a piano song/music database
   - 11/17: Create piano round-based mode, Survival (Bop-It mode)
   - 12/1: Create different play options menu (survival/song choice) for GUI
-- Requirement Specification
-  - 9/22: A GUI shall be created.
-  - 9/29: A piano shall be displayed on the GUI.
-  - 10/13: A piano shall be interactable on the GUI.
-- Design Specification
-  - 9/22: A GUI shall be created.
-  - 9/29: A piano shall be displayed on the GUI.
-  - 10/13: A piano shall be interactable on the GUI.
+- 9/27: Requirement Specification
+- 10/4: Design Specification
