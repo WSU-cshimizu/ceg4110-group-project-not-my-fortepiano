@@ -24,7 +24,7 @@ and the acceptance criteria is a checklist of when requirements are complete.
   Scrum consists of two-week planned sprint cycles, but it is difficult to use in service industries, as it can be slow to react to major disruptions. The Kanban system
   that DFL switched to emphasizes completing all work before moving to a new project, but adapting to needs as they arise.
 
-How to get a job:
+## How to get a job
  1. Network
  2. Have a good resume
  3. Prepare well for interviews
