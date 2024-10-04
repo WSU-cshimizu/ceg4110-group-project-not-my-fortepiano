@@ -1,0 +1,116 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .piano {
+            display: flex;
+            position: relative;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .key {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 1%;
+            font-size: 2vh;
+            cursor: pointer;
+        }
+
+        .key.highlight::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 191, 255, .5);
+        }
+
+        .key.white {
+            z-index: 1;
+            height: 99%;
+            width: 11.25%;
+            background-color: #fff;
+            outline: .1vh solid #000;
+            color: #000;
+        }
+
+        .key.white.highlight::after {
+            height: 101.5%;
+        }
+
+        .key.black {
+            z-index: 2;
+            position: absolute;
+            height: 59%;
+            width: 5%;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .key.black.highlight::after {
+            height: 100%;
+        }
+
+
+        .piano > :nth-child(2) {
+            left: 8.75%;
+        }
+
+        .piano > :nth-child(4) {
+            left: 19.75%;
+        }
+
+        .piano > :nth-child(6) {
+            left: 31%;
+        }
+
+        .piano > :nth-child(9) {
+            left: 53.25%;
+        }
+
+        .piano > :nth-child(11) {
+            left: 64.25%;
+        }
+
+        .piano > :nth-child(14) {
+            left: 86.75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="piano">
+        <div class="key white" data-note="F3">F3</div>
+        <div class="key black" data-note="F3#">F3#</div>
+        <div class="key white" data-note="G3">G3</div>
+        <div class="key black" data-note="G3#">G3#</div>
+        <div class="key white" data-note="A3">A3</div>
+        <div class="key black" data-note="A3#">A3#</div>
+        <div class="key white" data-note="B3">B3</div>
+        <div class="key white" data-note="C4">C4</div>
+        <div class="key black" data-note="C4#">C4#</div>
+        <div class="key white" data-note="D4">D4</div>
+        <div class="key black" data-note="D4#">D4#</div>
+        <div class="key white" data-note="E4">E4</div>
+        <div class="key white" data-note="F4">F4</div>
+        <div class="key black" data-note="F4#">F4#</div>
+        <div class="key white" data-note="G4">G4</div>
+    </div>
+
+    <script>
+        $('.key').on('click', function() {
+            console.log($(this).text());
+        });
+    </script>
+</body>
+</html>
