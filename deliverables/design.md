@@ -33,6 +33,8 @@
       3. The system shall have a database for top scores and associated names. 
          The backend shall store the three highest scores along with those users' initials and display them when "see high scores" is selected from the menu.
 ![backEndDesign](https://github.com/user-attachments/assets/81411e27-1208-4e05-b63f-45f182723542)
+![audio](https://github.com/user-attachments/assets/4683e85f-6e66-4ff6-aa85-6a85247074f7)
+
 
 4. The system shall be programmed in the languages Python, HTML, CSS, Javascript, and SQL. HTML, CSS, and Javascript will be used for the GUI and event management in in the frontend, and Python and SQL will be used for the piano logic and database querying in the backend.
 ![frontEndLanguages](https://github.com/user-attachments/assets/8d69906b-6696-4eb2-a3ba-8d00363894b2)
