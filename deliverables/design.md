@@ -19,7 +19,7 @@
       ![frontEndDesign](https://github.com/user-attachments/assets/fda4479b-0bd6-4b7b-8630-8126650fc7f6)
 
 
-4. The system shall have a backend
+3. The system shall have a backend
 
    1. The backend of the system shall have logical components.
       1. The logical components of the system shall have logic to allow the user to play individual piano notes. 
@@ -34,3 +34,4 @@
          The backend shall store the three highest scores along with those users' initials and display them when "see high scores" is selected from the menu.
          ![backEndDesign](https://github.com/user-attachments/assets/81411e27-1208-4e05-b63f-45f182723542)
 
+4. The system shall be programmed in the languages Python, HTML, CSS, Javascript, and SQL. HTML, CSS, and Javascript will be used in the frontend, and Python and SQL will be used in the backend.
