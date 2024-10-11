@@ -16,7 +16,7 @@
    3. The frontend shall have a popup for adding a name to save a high score at the end of a round of "survival" mode. 
       The frontend shall display the user's current score as determined by the backend, and shall prompt the user to enter their initials if their score
       exceeds the high scores stored previously in the backend.
-![frontEndDesign](https://github.com/user-attachments/assets/fda4479b-0bd6-4b7b-8630-8126650fc7f6)
+![frontEndDesign](https://github.com/user-attachments/assets/f0c0fc60-9c39-46fa-91cc-d3c79b2914eb)
 ![keys](https://github.com/user-attachments/assets/b3f82f48-6def-40c3-959c-02a5a35e48ce)
 
 3. The system shall have a backend
