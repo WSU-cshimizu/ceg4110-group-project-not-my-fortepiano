@@ -6,7 +6,9 @@ import pygame
 velocity = 127  # 127 is max for a.sf2
 fs = fluidsynth.Synth()
 fs.start()
-sfid = fs.sfload("Nice-Steinway-Lite-v3.0.sf2")
+sfid = fs.sfload(
+    "Nice-Steinway-Lite-v3.0.sf2"
+)  # from https://sites.google.com/site/soundfonts4u/
 fs.program_select(0, sfid, 0, 0)
 
 pygame.init()

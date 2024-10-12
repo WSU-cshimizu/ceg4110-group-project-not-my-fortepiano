@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/alexyeoh/Desktop/piano stuff/venv"
+set -gx VIRTUAL_ENV "/Users/alexyeoh/github/ceg4110-group-project-not-my-fortepiano/piano-logic/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

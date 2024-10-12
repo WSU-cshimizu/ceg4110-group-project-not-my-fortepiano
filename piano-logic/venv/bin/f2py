@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/alexyeoh/Desktop/piano stuff/venv/bin/python3.12" "$0" "$@"
-' '''
+#!/Users/alexyeoh/github/ceg4110-group-project-not-my-fortepiano/piano-logic/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
