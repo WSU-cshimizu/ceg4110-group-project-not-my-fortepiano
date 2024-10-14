@@ -119,7 +119,7 @@ how to deal with fatigue and stress?
 capacity planning: start at 40 hours, working about 60%
 meetings, items; if they can't reach the goal realistically, they try to minimize the goal
 
-branching strategy: don't have a good answer for how to branch and merge
+Branching strategy: don't have a good answer for how to branch and merge
 check your code daily
 git has their own branching stategy
 Mozilla has a strategy
