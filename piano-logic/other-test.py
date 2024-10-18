@@ -1,7 +1,7 @@
 import mido
 
 # Open the MIDI file
-mid = mido.MidiFile('Mary-Had-a-Little-Lamb.mid')
+mid = mido.MidiFile('Mary Had a Little Lamb.mid')
 
 # Iterate over tracks
 for i, track in enumerate(mid.tracks):
