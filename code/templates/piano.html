@@ -1,0 +1,47 @@
+{% block stylesheets %}
+<link rel="stylesheet" href="/static/css/piano.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{% endblock %}
+
+<div class="piano">
+    <div class="key white" data-note="53">F3</div>
+    <div class="key black" data-note="54">F3#</div>
+    <div class="key white" data-note="55">G3</div>
+    <div class="key black" data-note="56">G3#</div>
+    <div class="key white" data-note="57">A3</div>
+    <div class="key black" data-note="58">A3#</div>
+    <div class="key white" data-note="59">B3</div>
+    <div class="key white" data-note="60">C4</div>
+    <div class="key black" data-note="61">C4#</div>
+    <div class="key white" data-note="62">D4</div>
+    <div class="key black" data-note="63">D4#</div>
+    <div class="key white" data-note="64">E4</div>
+    <div class="key white" data-note="65">F4</div>
+    <div class="key black" data-note="66">F4#</div>
+    <div class="key white" data-note="67">G4</div>
+</div>
+
+<script>
+    const mode = "{{ mode }}"
+    var nextNote = null
+
+    $(".key").on("click", function() {
+        if(mode == "play_music" || mode == "survival") {
+            // Send AJAX POST request
+            $.ajax({
+                url: 'api/keypress',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify({'mode': mode, key: $(this).data('note')}),                       
+                success: function(data) {
+                    console.log(data.nextNote)
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    // Convert response into usable JavaScript data
+                    console.log(xhr.responseText)
+                    error = JSON.parse(xhr.responseText);
+                }       
+            });
+        }
+    });
+</script>

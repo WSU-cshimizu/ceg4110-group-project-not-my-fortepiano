@@ -3,7 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/static/css/stylesheet.css">
-        <title>{% block title %}Play Piano{% endblock %}</title>    </head>
+        <title>{% block title %}Play Piano{% endblock %}</title>
+        {% block stylesheets %}
+        {% endblock %}
+    </head>
     <body>
 
         <div id="mySidenav" class="sidenav">
@@ -37,6 +40,5 @@
             <!-- Content will go here -->
             {% endblock %}
         </div>
-    
     </body>
 </html> 
