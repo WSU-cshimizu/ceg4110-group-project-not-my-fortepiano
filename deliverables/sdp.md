@@ -27,7 +27,7 @@ This decision was made because nobody wanted to be "in charge". We decided that 
   - 9/22: Display a GUI
   - 10/6: Display a piano
   - 10/6: Create piano logic
-  - 10/13: Create interactability for the piano between the front and back end.
+  - 10/20: Create interactability for the piano between the front and back end.
   - 11/10: Create a piano song/music database
   - 11/17: Create piano round-based mode, Survival (Bop-It mode)
   - 12/1: Create different play options menu (survival/song choice) for GUI
