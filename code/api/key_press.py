@@ -2,6 +2,7 @@ from flask import jsonify, abort
 import fluidsynth
 import mido
 import json
+import random
 
 currentNote = 0
 
@@ -22,6 +23,16 @@ def key_press(data):
             # unclear how this sound is passed to the front
             fs.noteon(0, data["key"], velocity)
         case "survival":
+            # should be initilized when survival mode is selected
+            previousNote = random.randint(53, 67)
+            score = 0
+
+            if previousNote != data["key"]:
+                return jsonify({"correctNote": False, "nextNote": 0})  # exit the mode
+            else:
+                previousNote = random.randint(53, 67)
+                score += 1
+                return jsonify({"correctNote": True, "nextNote": previousNote})
             pass
         case "song":
             # should be initilized when a specific song is selected
