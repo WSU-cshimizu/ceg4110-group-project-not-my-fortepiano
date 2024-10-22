@@ -6,9 +6,9 @@ import random
 
 currentNote = 0
 
-
-# currently no way to exit, not sure if its needed
-def key_press(data):
+# Access persistent/'saved' variables in session variable
+# All session variables are guaranteed start state. View 'main.py'
+def key_press(data, session):
     match data["mode"]:
         case "play_music":
             # should be initilized when play_music mode is selected
