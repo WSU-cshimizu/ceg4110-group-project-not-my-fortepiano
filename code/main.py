@@ -12,7 +12,7 @@ def render_homepage():
 @app.route('/api/piano/keypress', methods=['POST'])
 def handle_key_press():
     data = request.json
-    return key_press(data, session)
+    return key_press(data)
 
 @app.route('/freeplay')
 def render_freeplay():

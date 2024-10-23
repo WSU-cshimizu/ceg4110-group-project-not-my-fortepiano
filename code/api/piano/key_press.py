@@ -1,4 +1,4 @@
-from flask import jsonify, abort
+from flask import jsonify, abort, session
 import fluidsynth
 import mido
 import json
@@ -8,7 +8,7 @@ currentNote = 0
 
 # Access persistent/'saved' variables in session variable
 # All session variables are guaranteed start state. View 'main.py'
-def key_press(data, session):
+def key_press(data):
     match data["mode"]:
         case "play_music":
             # should be initilized when play_music mode is selected
