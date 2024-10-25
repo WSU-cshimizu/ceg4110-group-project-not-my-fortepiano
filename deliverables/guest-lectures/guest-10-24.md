@@ -13,6 +13,7 @@
 - Winsupply is the 2nd largest plumbing wholesaler in the U.S and 2nd largest company in Dayton.
     - WinSupply creates their own software for things like inventory and communication instead of buying OTS systems from someone else.
     - Their development teams do not specialize in only one platform such as Microsoft, Oracle, or IBM, etc.
+    - Different teams at Winsupply use different versions of AGILE, such as Kanban and Scrum.
     - They sometimes work with other companies such as SDS for outsourcing of development when it is more profitable and the in-house team(s) have more important things to work on.
     - They have recently tried RFID warehousing, drone deliveries, and smart lockers.
 
@@ -25,6 +26,7 @@
   - Furthermore, cloud storage is expensive. If you're going to run an AI/LLM, you should maintain your own datacenter for it.
 
 - Tech can change a lot over 10 years.
+  - Sometimes early adoption is not the best policy. Many technologies such as the Metaverse have flopped.
   - What was trendy 10 years ago is inefficient and out-of-style.
   - What was trendy 20-30 years ago is all-but-forgotten.
 
