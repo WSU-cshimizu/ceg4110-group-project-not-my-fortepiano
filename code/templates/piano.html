@@ -19,6 +19,23 @@
     <div class="key white" data-note="65">F4</div>
     <div class="key black" data-note="66">F4#</div>
     <div class="key white" data-note="67">G4</div>
+    <div class="audio">
+        <audio data-key="53" src="/static/sounds/53.mp3"></audio>
+        <audio data-key="54" src="/static/sounds/54.mp3"></audio>
+        <audio data-key="55" src="/static/sounds/55.mp3"></audio>
+        <audio data-key="56" src="/static/sounds/56.mp3"></audio>
+        <audio data-key="57" src="/static/sounds/57.mp3"></audio>
+        <audio data-key="58" src="/static/sounds/58.mp3"></audio>
+        <audio data-key="59" src="/static/sounds/59.mp3"></audio>
+        <audio data-key="60" src="/static/sounds/60.mp3"></audio>
+        <audio data-key="61" src="/static/sounds/61.mp3"></audio>
+        <audio data-key="62" src="/static/sounds/62.mp3"></audio>
+        <audio data-key="63" src="/static/sounds/63.mp3"></audio>
+        <audio data-key="64" src="/static/sounds/64.mp3"></audio>
+        <audio data-key="65" src="/static/sounds/65.mp3"></audio>
+        <audio data-key="66" src="/static/sounds/66.mp3"></audio>
+        <audio data-key="67" src="/static/sounds/67.mp3"></audio>
+    </div>
 </div>
 
 <script>
@@ -26,10 +43,13 @@
     var nextNote = null
 
     $(".key").on("click", function() {
+        const audio = document.querySelector('audio[data-key="' + $(this).data('note') + '"]')
+        audio.play()
+        
         if(mode == "play_music" || mode == "survival") {
             // Send AJAX POST request
             $.ajax({
-                url: 'api/keypress',
+                url: 'api/piano/keypress',
                 type: 'post',
                 contentType: 'application/json',
                 data: JSON.stringify({'mode': mode, key: $(this).data('note')}),                       

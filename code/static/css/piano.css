@@ -39,6 +39,10 @@
     color: #000;
 }
 
+.piano .key.white:hover {
+    background-color: #c9c9c9;
+}
+
 .piano .key.white.highlight::after {
     height: 101.5%;
 }
@@ -52,10 +56,13 @@
     color: #fff;
 }
 
+.piano .key.black:hover {
+    background-color: #666666;
+}
+
 .piano .key.black.highlight::after {
     height: 100%;
 }
-
 
 .piano > :nth-child(2) {
     left: 8.75%;
