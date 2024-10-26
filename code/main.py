@@ -17,15 +17,17 @@ def handle_key_press():
 @app.route('/freeplay')
 def render_freeplay():
     session['mode'] = "freeplay"
+    session['previous_note'] = 60 #default start note is middle c
+    session['score'] = 0
     return(render_template('freeplay.html', mode='freeplay'))
 
 @app.route('/play-music')
 def render_play_music():
     # Initalize session variables
     session['mode'] = "play_music"
-    session['score'] = -1
-    session['notes'] = {}
-    session['index'] = -1
+    session['score'] = 0
+    session['notes'] = {} #notes should be initialized here based on song selected which might need another page
+    session['index'] = 0
 
     return(render_template('play_music.html', mode='play_music'))
 
