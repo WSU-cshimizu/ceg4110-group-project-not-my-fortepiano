@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, render_template, request, redirect, url_for, session, send_file
 from api.piano.key_press import key_press
+from api.piano.initalize_notes import initalize_notes
 import os
 
 app = Flask(__name__)
@@ -13,6 +14,10 @@ def render_homepage():
 def handle_key_press():
     data = request.json
     return key_press(data)
+
+@app.route('/api/piano/initialize', methods=['POST'])
+def handle_initialize():
+    return initalize_notes()
 
 @app.route('/freeplay')
 def render_freeplay():

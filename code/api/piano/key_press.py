@@ -32,7 +32,7 @@ def key_press(data):
                 session["score"] += 1
                 return jsonify({"correctNote": True, "nextNote": session["previous_note"]})
             
-        case "song":
+        case "play_music":
             # # should be initilized when a specific song is selected
             # # Open the MIDI file
             # mid = mido.MidiFile("assets/songs/Mary Had a Little Lamb.mid")

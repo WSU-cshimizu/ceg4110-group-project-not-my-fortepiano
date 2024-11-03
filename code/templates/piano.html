@@ -42,6 +42,25 @@
     const mode = "{{ mode }}"
     var nextNote = null
 
+    window.onload = function() {
+        if(mode == "play_music" || mode == "survival") {
+            // Send AJAX POST request
+            $.ajax({
+                url: 'api/piano/initialize',
+                type: 'post',
+                contentType: 'application/json',              
+                success: function(data) {
+                    document.querySelector('.key[data-note="' + data.nextNote + '"]').classList.add("highlight")
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    // Convert response into usable JavaScript data
+                    console.log(xhr.responseText)
+                    error = JSON.parse(xhr.responseText);
+                }       
+            });
+        }
+    };
+
     $(".key").on("click", function() {
         const audio = document.querySelector('audio[data-key="' + $(this).data('note') + '"]')
         audio.play()
@@ -54,7 +73,19 @@
                 contentType: 'application/json',
                 data: JSON.stringify({'mode': mode, key: $(this).data('note')}),                       
                 success: function(data) {
-                    console.log(data.nextNote)
+                    if(data.correctNote == false) {
+                        console.log("INCORRECT NOTE. END HERE!!!")
+                    }
+
+                    else {
+                        keys = document.querySelectorAll('.key')
+
+                        for(var i = 0; i < keys.length; i++) {
+                            keys[i].classList.remove("highlight")
+                        }
+
+                        document.querySelector('.key[data-note="' + data.nextNote + '"]').classList.add("highlight")
+                    }
                 },
                 error: function(xhr, textStatus, errorThrown) {
                     // Convert response into usable JavaScript data

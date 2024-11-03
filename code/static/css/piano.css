@@ -19,6 +19,7 @@
     padding-bottom: 1%;
     font-size: 2vh;
     cursor: pointer;
+    position: relative;
 }
 
 .piano .key.highlight::after {
@@ -44,7 +45,7 @@
 }
 
 .piano .key.white.highlight::after {
-    height: 101.5%;
+    height: 100%;
 }
 
 .piano .key.black {
