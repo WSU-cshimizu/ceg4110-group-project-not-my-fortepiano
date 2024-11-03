@@ -57,7 +57,7 @@ def loadSurvScore(score):
     else:
         if(score == currentScores[[0]].iloc[[0]] or score > currentScores[[0]].iloc[[1]]):
             currentScores[[2]] = currentScores.iloc[[1]]
-            currentScores[[1]].iloc = score
+            currentScores[[1]].iloc[[0]] = score
             #input initials into name location
             initials = input("Enter your initials: ")
             currentScores[0].iloc[[1]] = initials
