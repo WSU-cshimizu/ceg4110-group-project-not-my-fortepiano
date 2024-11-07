@@ -106,7 +106,7 @@ def loadSurvScore(score):
     currentScores.to_csv('survscore.csv', index=False)
     
 #function to find music file based on song title
-def findSongMidi(songName):
+def findMusicFile(songName):
     #open songs.csv
     songDir = pd.read_csv('songs.csv')
     #find the song by its name
