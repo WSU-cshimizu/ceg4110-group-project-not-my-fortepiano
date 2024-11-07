@@ -105,6 +105,24 @@ def loadSurvScore(score):
     print(currentScores)
     currentScores.to_csv('survscore.csv', index=False)
     
+#function to find music file based on song title
+def findSongMidi(songName):
+    #open songs.csv
+    songDir = pd.read_csv('songs.csv')
+    #find the song by its name
+    #find the music file in that row
+    #return that music file's name
+    return(songDir[songDir['songTitle'] == songName]['musicFile'].values[0])
+
+#function to find song title based on music file
+def findSongMidi(songFile):
+    #open songs.csv
+    songDir = pd.read_csv('songs.csv')
+    #find the song by its music file
+    #find the name in that row
+    #return the song title associated with the music file
+    return(songDir[songDir['musicFile'] == songFile]['songTitle'].values[0])
+
 #testing function calls;  comment out when game is in use!
 #loadSurvScore(1000)
 #loadSurvScore(500)
