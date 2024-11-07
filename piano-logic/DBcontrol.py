@@ -115,7 +115,7 @@ def findSongMidi(songName):
     return(songDir[songDir['songTitle'] == songName]['musicFile'].values[0])
 
 #function to find song title based on music file
-def findSongMidi(songFile):
+def findSongTitle(songFile):
     #open songs.csv
     songDir = pd.read_csv('songs.csv')
     #find the song by its music file
