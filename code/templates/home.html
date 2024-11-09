@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">        
-        <title>Piano</title>
-    </head>
+{% extends 'base.html' %}
 
-    <body>
-        
-<div class="dropdown">
-    <button>Menu</button>
-    <div class="dropdown-content">
-        <a href="#">Option 1</a>
-        <a href="#">Option 2</a>
-        <a href="#">Option 3</a>
-    </div>
-</div>
+{% block title %}Not My Fortepiano{% endblock %}
 
-    </body>
-</html>
+{% block header %}
+    <h1>Not my Forte Piano</h1>
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Not My Fortepiano</h1>
+{% endblock %}
