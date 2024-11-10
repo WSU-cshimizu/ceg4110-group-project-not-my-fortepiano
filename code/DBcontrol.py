@@ -123,6 +123,15 @@ def findSongTitle(songFile):
     #return the song title associated with the music file
     return(songDir[songDir['musicFile'] == songFile]['songTitle'].values[0])
 
+# Function to show all songs in database
+def showAllSongs():
+    #open songs.csv
+    songDir = pd.read_csv('code/assets/databases/songs.csv')
+    #find the song by its music file
+    #find the name in that row
+    #return the song title associated with the music file
+    return(songDir)
+
 #testing function calls;  comment out when game is in use!
 #loadSurvScore(1000)
 #loadSurvScore(500)

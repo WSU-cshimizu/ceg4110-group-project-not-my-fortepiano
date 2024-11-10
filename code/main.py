@@ -1,7 +1,9 @@
-from flask import Flask, Blueprint, render_template, request, redirect, url_for, session, send_file
-from api.piano.key_press import key_press
-from api.piano.initalize_notes import initalize_notes
 import os
+from flask import Flask, Blueprint, render_template, request, redirect, url_for, session, send_file, jsonify
+from api.piano.key_press import key_press
+from api.piano.select_song import select_song
+from api.piano.initalize_notes import initalize_notes
+from DBcontrol import showAllSongs
 
 app = Flask(__name__)
 app.secret_key = 'KtCAH&EFwPP)wsq4'
@@ -14,6 +16,11 @@ def render_homepage():
 def handle_key_press():
     data = request.json
     return key_press(data)
+
+@app.route('/api/piano/selectsong', methods=['POST'])
+def handle_song_select():
+    data = request.json
+    return select_song(data)
 
 @app.route('/api/piano/initialize', methods=['POST'])
 def handle_initialize():
@@ -33,8 +40,13 @@ def render_play_music():
     session['score'] = 0
     session['notes'] = {} #notes should be initialized here based on song selected which might need another page
     session['index'] = 0
+    songs = []
 
-    return(render_template('play_music.html', mode='play_music'))
+    # Generate list of available songs
+    for _, row in showAllSongs().iterrows():
+        songs.append(row['songTitle'])
+
+    return(render_template('play_music.html', mode='play_music', songs=songs))
 
 @app.route('/survival')
 def render_survival():

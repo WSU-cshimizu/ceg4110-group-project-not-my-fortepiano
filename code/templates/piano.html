@@ -71,7 +71,7 @@
                 url: 'api/piano/keypress',
                 type: 'post',
                 contentType: 'application/json',
-                data: JSON.stringify({'mode': mode, key: $(this).data('note')}),                       
+                data: JSON.stringify({'mode': mode, 'key': $(this).data('note')}),                       
                 success: function(data) {
                     if(data.correctNote == false) {
                         console.log("INCORRECT NOTE. END HERE!!!")
@@ -86,6 +86,26 @@
 
                         document.querySelector('.key[data-note="' + data.nextNote + '"]').classList.add("highlight")
                     }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    // Convert response into usable JavaScript data
+                    console.log(xhr.responseText)
+                    error = JSON.parse(xhr.responseText);
+                }       
+            });
+        }
+    });
+
+    $(".songSelect .selection a").on("click", function() {
+        if(mode == "play_music" || mode == "survival") {
+            // Send AJAX POST request
+            $.ajax({
+                url: 'api/piano/selectsong',
+                type: 'post',
+                contentType: 'application/json',    
+                data: JSON.stringify({'song': $(this).data('name')}),     
+                success: function(data) {
+                    document.querySelector(".songSelect").remove();
                 },
                 error: function(xhr, textStatus, errorThrown) {
                     // Convert response into usable JavaScript data

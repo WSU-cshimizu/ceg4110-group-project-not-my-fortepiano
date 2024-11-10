@@ -6,6 +6,11 @@ body {
     text-align: center;
 }
 
+.header h1 {
+    margin: 0;
+    padding: 2vh 0%;
+}
+
 .content {
     text-align: center;
 }
@@ -50,4 +55,5 @@ body {
     left: 1;
     cursor: pointer;
     font-size: 36px;
+    padding: 0vh 1vh;
 }
