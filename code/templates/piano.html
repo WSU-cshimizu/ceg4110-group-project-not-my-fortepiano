@@ -97,7 +97,7 @@
     });
 
     $(".songSelect .selection a").on("click", function() {
-        if(mode == "play_music" || mode == "survival") {
+        if(mode == "play_music") {
             // Send AJAX POST request
             $.ajax({
                 url: 'api/piano/selectsong',
@@ -106,6 +106,15 @@
                 data: JSON.stringify({'song': $(this).data('name')}),     
                 success: function(data) {
                     document.querySelector(".songSelect").remove();
+                    keys = document.querySelectorAll('.key')
+
+                    for(var i = 0; i < keys.length; i++) {
+                        keys[i].classList.remove("highlight")
+                    }
+
+                    console.log(data.nextNote)
+
+                    document.querySelector('.key[data-note="' + data.nextNote + '"]').classList.add("highlight")
                 },
                 error: function(xhr, textStatus, errorThrown) {
                     // Convert response into usable JavaScript data

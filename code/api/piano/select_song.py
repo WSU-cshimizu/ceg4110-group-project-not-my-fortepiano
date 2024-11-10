@@ -19,6 +19,8 @@ def select_song(data):
     # print(session["notes"])
     # print(data['song'])
 
+    print(session['notes'])
+
     return jsonify(
         {"correctNote": True, "nextNote": session["notes"][session["index"]]}
     )
