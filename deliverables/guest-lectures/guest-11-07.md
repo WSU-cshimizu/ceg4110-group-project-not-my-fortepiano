@@ -47,7 +47,7 @@
     - Release
     - Configure 
     - Monitor
-        - DevSecOps adds in security operations to the cycle and is common in government
+    - DevSecOps adds in security operations to the cycle and is common in government
 
 - Admin Zen
     - Know your tools
