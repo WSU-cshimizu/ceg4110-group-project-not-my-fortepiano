@@ -3,7 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 {% endblock %}
 
-<div class="piano">
+<section class="piano">
     <div class="key white" data-note="53">F3</div>
     <div class="key black" data-note="54">F3#</div>
     <div class="key white" data-note="55">G3</div>
@@ -19,31 +19,15 @@
     <div class="key white" data-note="65">F4</div>
     <div class="key black" data-note="66">F4#</div>
     <div class="key white" data-note="67">G4</div>
-    <div class="audio">
-        <audio data-key="53" src="/static/sounds/53.mp3"></audio>
-        <audio data-key="54" src="/static/sounds/54.mp3"></audio>
-        <audio data-key="55" src="/static/sounds/55.mp3"></audio>
-        <audio data-key="56" src="/static/sounds/56.mp3"></audio>
-        <audio data-key="57" src="/static/sounds/57.mp3"></audio>
-        <audio data-key="58" src="/static/sounds/58.mp3"></audio>
-        <audio data-key="59" src="/static/sounds/59.mp3"></audio>
-        <audio data-key="60" src="/static/sounds/60.mp3"></audio>
-        <audio data-key="61" src="/static/sounds/61.mp3"></audio>
-        <audio data-key="62" src="/static/sounds/62.mp3"></audio>
-        <audio data-key="63" src="/static/sounds/63.mp3"></audio>
-        <audio data-key="64" src="/static/sounds/64.mp3"></audio>
-        <audio data-key="65" src="/static/sounds/65.mp3"></audio>
-        <audio data-key="66" src="/static/sounds/66.mp3"></audio>
-        <audio data-key="67" src="/static/sounds/67.mp3"></audio>
-    </div>
-</div>
+</section>
 
 <script>
     const mode = "{{ mode }}"
+    var audioElements = null
     var nextNote = null
 
     window.onload = function() {
-        if(mode == "play_music" || mode == "survival") {
+        if(mode == "survival") {
             // Send AJAX POST request
             $.ajax({
                 url: 'api/piano/initialize',
@@ -62,8 +46,11 @@
     };
 
     $(".key").on("click", function() {
-        const audio = document.querySelector('audio[data-key="' + $(this).data('note') + '"]')
-        audio.play()
+        const audio = new Audio("/static/sounds/" + $(this).data('note') + ".mp3")
+        
+        audio.addEventListener("canplaythrough", (event) => {
+            audio.play();
+        });
         
         if(mode == "play_music" || mode == "survival") {
             // Send AJAX POST request
@@ -73,8 +60,26 @@
                 contentType: 'application/json',
                 data: JSON.stringify({'mode': mode, 'key': $(this).data('note')}),                       
                 success: function(data) {
-                    if(data.correctNote == false) {
-                        console.log("INCORRECT NOTE. END HERE!!!")
+                    var modal = document.querySelector(".modals")
+                    var end = modal.querySelector(".end")
+
+                    if(data.status == 1) {
+                        modal.classList.remove("hidden")
+                        end.classList.add("shown")
+                        end.querySelector("h1").innerHTML = "Completed Successfully"
+                        end.querySelector("p").innerHTML = "Score: " + data.score
+                        end.querySelector(".form").classList.add("shown")
+                    }
+
+                    else if(data.correctNote == false) {
+                        modal.classList.remove("hidden")
+                        end.classList.add("shown")
+                        end.querySelector("h1").innerHTML = "Incorrect Note Pressed"
+                        end.querySelector("p").innerHTML = "Score: " + data.score
+
+                        if(mode == "survival") {
+                            end.querySelector(".form").classList.add("shown")
+                        }
                     }
 
                     else {
@@ -96,7 +101,7 @@
         }
     });
 
-    $(".songSelect .selection a").on("click", function() {
+    $(".modals .selection a").on("click", function() {
         if(mode == "play_music") {
             // Send AJAX POST request
             $.ajax({
@@ -105,14 +110,14 @@
                 contentType: 'application/json',    
                 data: JSON.stringify({'song': $(this).data('name')}),     
                 success: function(data) {
-                    document.querySelector(".songSelect").remove();
+                    document.querySelector(".modals .selection").remove();
+                    document.querySelector(".modals").classList.add("hidden");
+
                     keys = document.querySelectorAll('.key')
 
                     for(var i = 0; i < keys.length; i++) {
                         keys[i].classList.remove("highlight")
                     }
-
-                    console.log(data.nextNote)
 
                     document.querySelector('.key[data-note="' + data.nextNote + '"]').classList.add("highlight")
                 },
@@ -123,5 +128,23 @@
                 }       
             });
         }
+    });
+
+    $(".modals .end a").on("click", function() {
+        // Send AJAX POST request
+        $.ajax({
+            url: 'api/piano/setscore',
+            type: 'post',
+            contentType: 'application/json',    
+            data: JSON.stringify({'name': document.querySelector(".modals .modal .form input[name=name]").value}),
+            success: function(data) {
+                location.reload();
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                // Convert response into usable JavaScript data
+                console.log(xhr.responseText)
+                error = JSON.parse(xhr.responseText);
+            }       
+        });
     });
 </script>

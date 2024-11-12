@@ -4,12 +4,10 @@
 
 {% if mode == 'freeplay' %}
 {% block selection %}
-<div class="songSelect">
-    <div class="selection">
-        {% for item in songs %}
-            <a data-name="{{ item }}">{{ item }}</a>
-        {% endfor %}
-    </div>
+<div class="modal selection shown">
+    {% for item in songs %}
+        <a data-name="{{ item }}">{{ item }}</a>
+    {% endfor %}
 </div>
 {% endblock %}
 {% endif %}

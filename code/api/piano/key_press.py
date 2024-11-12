@@ -16,7 +16,7 @@ def key_press(data):
             # score = 0
             print(session["score"])
             if session["previous_note"] != data["key"]:
-                return jsonify({"correctNote": False, "nextNote": 0})  # exit the mode
+                return jsonify({"status": 0, "score": session['score'], "correctNote": False, "nextNote": 0})  # exit the mode
             else:
                 session["previous_note"] = random.randint(53, 67)
                 session["score"] += 1
@@ -38,7 +38,7 @@ def key_press(data):
             # check if the correct key was pressed
             if data["key"] != int(session["notes"][session["index"]]):
                 print("final score: ", session["score"])
-                return jsonify({"correctNote": False, "nextNote": 0})
+                return jsonify({"status": 0, "score": session['score'], "correctNote": False, "nextNote": 0})
             session["index"] += 1
             session["score"] += 1
             print("Score: ", session["score"])
@@ -46,7 +46,7 @@ def key_press(data):
             # check if the next note is out of bounds
             if session["index"] >= len(session["notes"]):
                 print("final score: ", session["score"])
-                return jsonify({"correctNote": False, "nextNote": 0})
+                return jsonify({"status": 1, "score": session['score'], "correctNote": True, "nextNote": 0})
             return jsonify(
                 {
                     "correctNote": True,

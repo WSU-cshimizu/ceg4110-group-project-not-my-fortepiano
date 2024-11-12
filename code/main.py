@@ -10,9 +10,10 @@ from flask import (
     send_file,
     jsonify,
 )
-from api.piano.key_press import key_press
 from api.piano.select_song import select_song
 from api.piano.initalize_notes import initalize_notes
+from api.piano.key_press import key_press
+from api.piano.set_score import set_score
 from DBcontrol import showAllSongs
 
 app = Flask(__name__)
@@ -23,23 +24,24 @@ app.secret_key = "KtCAH&EFwPP)wsq4"
 def render_homepage():
     return render_template("home.html")
 
-
-@app.route("/api/piano/keypress", methods=["POST"])
-def handle_key_press():
-    data = request.json
-    return key_press(data)
-
+@app.route("/api/piano/initialize", methods=["POST"])
+def handle_initialize():
+    return initalize_notes()
 
 @app.route("/api/piano/selectsong", methods=["POST"])
 def handle_song_select():
     data = request.json
     return select_song(data)
 
+@app.route("/api/piano/keypress", methods=["POST"])
+def handle_key_press():
+    data = request.json
+    return key_press(data)
 
-@app.route("/api/piano/initialize", methods=["POST"])
-def handle_initialize():
-    return initalize_notes()
-
+@app.route("/api/piano/setscore", methods=["POST"])
+def handle_set_score():
+    data = request.json
+    return set_score(data)
 
 @app.route("/freeplay")
 def render_freeplay():

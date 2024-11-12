@@ -8,8 +8,30 @@
         {% endblock %}
     </head>
     <body>
-        {% block selection %}
+        {% if mode and mode != "freeplay" %}
+        {% block modal %}
+        {% if mode == 'play_music' %}
+        <section class="modals">
+        {% else %}
+        <section class="modals hidden">
+        {% endif %}
+            {% block selection %}
+            {% endblock %}
+            <div class="modal end">
+                <h1>Success!</h1>
+                <p>Score: </p>
+                <div class="form">
+                    <label>Please input your name</label>
+                    <input type="text" name="name">
+                    <div class="submit">
+                        <a class="submitName">Submit Score</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         {% endblock %}
+        {% endif %}
+
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/">Home</a>
