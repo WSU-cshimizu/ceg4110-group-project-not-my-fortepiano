@@ -14,7 +14,7 @@ def select_song(data):
         for msg in track:
             instruction = str(msg)
             if instruction.__contains__("note_off"):
-                notes.append(instruction[24:26])
+                notes.append(str(int(instruction[24:26])+12))
     session["notes"] = notes
     # print(session["notes"])
     # print(data['song'])
