@@ -34,16 +34,25 @@ def key_press(data):
             #     data["key"],
             #     "\n",
             # )
-            if data["key"] == int(session["notes"][session["index"]]):
-                session["index"] += 1
-                return jsonify(
-                    {
-                        "correctNote": True,
-                        "nextNote": session["notes"][session["index"]],
-                    }
-                )
-            else:
+
+            # check if the correct key was pressed
+            if data["key"] != int(session["notes"][session["index"]]):
+                print("final score: ", session["score"])
                 return jsonify({"correctNote": False, "nextNote": 0})
+            session["index"] += 1
+            session["score"] += 1
+            print("Score: ", session["score"])
+
+            # check if the next note is out of bounds
+            if session["index"] >= len(session["notes"]):
+                print("final score: ", session["score"])
+                return jsonify({"correctNote": False, "nextNote": 0})
+            return jsonify(
+                {
+                    "correctNote": True,
+                    "nextNote": session["notes"][session["index"]],
+                }
+            )
 
         case _:
             abort(400, description="Missing 'mode' field")
