@@ -9,16 +9,16 @@ def newScoreFile(songName): #function to make an "empty" score file
     
 def resetSongs(): #function to relate song titles, their midi files, and their score files
     songData = {'songTitle':['Mary Had a Little Lamb', 'Down by the station'],
-                'musicFile':['Mary Had a Little Lamb.mid', 'Down by the station.mid'],
-                'scoreFile':['MHLLscore.csv', 'DBSscore.csv']
+                'musicFile':['code/assets/songs/Mary Had a Little Lamb.mid', 'code/assets/songs/Down by the station.mid'],
+                'scoreFile':['code/assets/databases/MHLLscore.csv', 'code/assets/databases/DBSscore.csv']
                 }
     songFrame = pd.DataFrame(songData)
     songFrame.to_csv('songs.csv', index=False)
 
 def resetScores(): #function to make new score files for the different songs and modes; this is rudimentary and can be called to remake all files with scores set to 0.
-    songScore1 = newScoreFile('MHLL')
-    songScore2 = newScoreFile('DBS')
-    survScore = newScoreFile('surv')
+    songScore1 = newScoreFile('code/assets/databases/MHLL')
+    songScore2 = newScoreFile('code/assets/databases/DBS')
+    survScore = newScoreFile('code/assets/databases/surv')
     
 #resetSongs() #initial call to create songs.csv; comment out when game is in use!
 #resetScores() #initial call to create scores csv files; comment out when game is in use!
@@ -26,7 +26,7 @@ def resetScores(): #function to make new score files for the different songs and
 #functions to access and change current song's score.csv
 def findSongScore(currentSong):
     #open songs.csv
-    songDir = pd.read_csv('songs.csv')
+    songDir = pd.read_csv('code/assets/databases/songs.csv')
     #find the song by its name
     #find the score file in that row
     #return the score file's name so we have a parameter to pass to loadSongScore()
@@ -108,7 +108,7 @@ def loadSurvScore(score):
 #function to find music file based on song title
 def findMusicFile(songName):
     #open songs.csv
-    songDir = pd.read_csv('songs.csv')
+    songDir = pd.read_csv('code/assets/databases/songs.csv')
     #find the song by its name
     #find the music file in that row
     #return that music file's name
@@ -117,7 +117,7 @@ def findMusicFile(songName):
 #function to find song title based on music file
 def findSongTitle(songFile):
     #open songs.csv
-    songDir = pd.read_csv('songs.csv')
+    songDir = pd.read_csv('code/assets/databases/songs.csv')
     #find the song by its music file
     #find the name in that row
     #return the song title associated with the music file
