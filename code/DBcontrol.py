@@ -68,11 +68,11 @@ def loadSongScore(scoreFile, score):
     print(currentScores)
     currentScores.to_csv(scoreFile, index=False)
 
-#function to access and change survscore.csv 
+#function to access and change code/assets/databases/survscore.csv 
 def loadSurvScore(score):
     #access survival score csv
     #bring the csv into a dataframe
-    currentScores = pd.read_csv('survscore.csv')
+    currentScores = pd.read_csv('code/assets/databases/survscore.csv')
     #compare top 3 scores with user's current score
     #nested ifs:
     if (score > currentScores.iloc[0, 0]):
@@ -103,7 +103,7 @@ def loadSurvScore(score):
                 currentScores.iloc[2, 1] = initials
     #only need to maintain/display top 3 scores
     print(currentScores)
-    currentScores.to_csv('survscore.csv', index=False)
+    currentScores.to_csv('code/assets/databases/survscore.csv', index=False)
     
 #function to find music file based on song title
 def findMusicFile(songName):
