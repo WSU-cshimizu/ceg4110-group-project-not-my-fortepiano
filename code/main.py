@@ -15,10 +15,10 @@ from api.piano.initalize_notes import initalize_notes
 from api.piano.key_press import key_press
 from api.piano.set_score import set_score
 from DBcontrol import showAllSongs
+from csvToHTML import toHTML
 
 app = Flask(__name__)
 app.secret_key = "KtCAH&EFwPP)wsq4"
-
 
 @app.route("/")
 def render_homepage():
@@ -77,7 +77,14 @@ def render_survival():
 
 @app.route("/scoreboard")
 def render_scoreboard():
-    return render_template("scoreboard.html", mode="scoreboard")
+    tables = ''
+    tables += '<h3>Survival Highscores</h3>\n'
+    tables += toHTML('assets/databases/survscore.csv')
+    tables += '<h3>Down by the Station Highscores</h3>\n'
+    tables += toHTML('assets/databases/DBSscore.csv')
+    tables += '<h3>Mary Had a Little Lamb Highscores</h3>\n'
+    tables += toHTML('assets/databases/MHLLscore.csv')
+    return render_template("scoreboard.html", mode="scoreboard", html=tables)
 
 
 if __name__ == "__main__":

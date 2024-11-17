@@ -12,7 +12,7 @@ body {
 }
 
 .header h1 {
-    flex-grow:1;
+    flex-grow: 0.95;
     text-align: center;
 }
 
