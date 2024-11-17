@@ -75,6 +75,10 @@ def render_survival():
 
     return render_template("survival.html", mode="survival")
 
+@app.route("/scoreboard")
+def render_scoreboard():
+    return render_template("scoreboard.html", mode="scoreboard")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

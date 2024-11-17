@@ -8,7 +8,7 @@
         {% endblock %}
     </head>
     <body>
-        {% if mode and mode != "freeplay" %}
+        {% if mode and mode != "freeplay" and mode != "scoreboard" %}
         {% block modal %}
         {% if mode == 'play_music' %}
         <section class="modals">
@@ -32,21 +32,28 @@
         {% endblock %}
         {% endif %}
 
+
         <div id="mySidenav" class="sidenav">
+            <p>Menu</p>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/">Home</a>
-            <a href="/freeplay">Freeplay</a>
-            <a href="/play-music">Play Music</a>
-            <a href="/survival">Survival</a>
+            <a href="/" class="navigation">Home</a>
+            <a href="/freeplay" class="navigation">Freeplay</a>
+            <a href="/play-music" class="navigation">Play Music</a>
+            <a href="/survival" class="navigation">Survival</a>
+            <a href="/scoreboard" class="navigation">Scoreboard</a>
         </div>
 
         <div class="header">
+            <div class="left-container">
+                <div class="navButton" onclick="openNav()">&#9776; </div>
+                <div class="menu" onclick="openNav()">Menu</div> 
+           </div> 
             {% block header %}
             <h1>Play Piano</h1>
             {% endblock %}
         </div>
 
-        <span class="navButton" onclick="openNav()"> &#9776;</span>
+
 
         <script>
             function openNav() {
@@ -56,6 +63,8 @@
             function closeNav() {
             document.getElementById("mySidenav").style.display = "none";
             }
+            // window.addEventListener('load', openNav());
+
         </script>
 
         <div class="content">

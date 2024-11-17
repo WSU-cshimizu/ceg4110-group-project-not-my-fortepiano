@@ -1,14 +1,40 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .header {
+    display: flex;
+    top:0;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
 .header h1 {
-    margin: 0;
-    padding: 2vh 0%;
+    flex-grow:1;
+    text-align: center;
+}
+
+
+.header .left-container .menu {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Adds space between menu and navButton */
+    margin-left: 10px;
+}
+
+.header .left-container .navButton {
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 10px;
+
+}
+
+.menu:hover
+{
+    color:#d3d3d3;
 }
 
 .content {
@@ -23,37 +49,41 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #ffffff;
     overflow-x: hidden;
     padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+.sidenav .navigation {
+    padding: 2px 2px 8px 10px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #000000;
     display: block;
 }
 
+.sidenav p {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    margin: 0;
+}
+
 .sidenav a:hover {
-    color: #f1f1f1;
+    background-color: #f0f0f0; /* Highlight effect on hover */
 }
 
 .sidenav .closebtn {
+    text-decoration: none;
+    padding: 0px;
+    color: #000000;
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 10px;
     font-size: 36px;
-    margin-left: 50px;
-}
-
-
-.navButton {
-    position: absolute;
-    top: 0;
-    left: 1;
-    cursor: pointer;
-    font-size: 36px;
-    padding: 0vh 1vh;
+    margin: 0;
 }
