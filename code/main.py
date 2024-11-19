@@ -14,34 +14,40 @@ from api.piano.select_song import select_song
 from api.piano.initalize_notes import initalize_notes
 from api.piano.key_press import key_press
 from api.piano.set_score import set_score
-from DBcontrol import showAllSongs
+from DBcontrol import showAllSongs, findTitlefromDB
 from csvToHTML import toHTML
 
 app = Flask(__name__)
 app.secret_key = "KtCAH&EFwPP)wsq4"
 
+
 @app.route("/")
 def render_homepage():
     return render_template("home.html")
 
+
 @app.route("/api/piano/initialize", methods=["POST"])
 def handle_initialize():
     return initalize_notes()
+
 
 @app.route("/api/piano/selectsong", methods=["POST"])
 def handle_song_select():
     data = request.json
     return select_song(data)
 
+
 @app.route("/api/piano/keypress", methods=["POST"])
 def handle_key_press():
     data = request.json
     return key_press(data)
 
+
 @app.route("/api/piano/setscore", methods=["POST"])
 def handle_set_score():
     data = request.json
     return set_score(data)
+
 
 @app.route("/freeplay")
 def render_freeplay():
@@ -70,20 +76,20 @@ def render_play_music():
 def render_survival():
     # Initalize session variables
     session["mode"] = "survival"
-    session["score"] = -1
+    session["score"] = 0
     session["previous"] = -1
 
     return render_template("survival.html", mode="survival")
 
+
 @app.route("/scoreboard")
 def render_scoreboard():
-    tables = ''
-    tables += '<h3>Survival Highscores</h3>\n'
-    tables += toHTML('assets/databases/survscore.csv')
-    tables += '<h3>Down by the Station Highscores</h3>\n'
-    tables += toHTML('assets/databases/DBSscore.csv')
-    tables += '<h3>Mary Had a Little Lamb Highscores</h3>\n'
-    tables += toHTML('assets/databases/MHLLscore.csv')
+    tables = ""
+    tables += "<h3>Survival Highscores</h3>\n"
+    tables += toHTML("code/assets/databases/survscore.csv")
+    for _, row in showAllSongs().iterrows():
+        tables+= "<h3>" + row["songTitle"] + "</h3>\n"
+        tables += toHTML("code/assets/databases/" + row["scoreFile"])
     return render_template("scoreboard.html", mode="scoreboard", html=tables)
 
 
