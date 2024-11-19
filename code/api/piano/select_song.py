@@ -1,13 +1,15 @@
 from flask import jsonify, abort, session
 import mido
+from DBcontrol import findDBFile
 
 
 def select_song(data):
+    session["song"] = "code/assets/databases/" + findDBFile(data["song"])
     # TODO add song init here (will display song name)
     # should be initilized when a specific song is selected
     # Open the MIDI file
-    mid = mido.MidiFile("assets/songs/" + data["song"] + ".mid")
-    print("assets/songs/" + data["song"] + ".mid")
+    mid = mido.MidiFile("code/assets/songs/" + data["song"] + ".mid")
+    print("code/assets/songs/" + data["song"] + ".mid")
     notes = []
     # Iterate over tracks
     for track in mid.tracks:
