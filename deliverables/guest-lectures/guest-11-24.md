@@ -22,7 +22,9 @@
 
 - Tech writing is a skill that helps you understand other people's thought-space.
 
-- AAA Devs are Academic, Available, Amiable.
+- AAA Devs are Academic, Available, and Amiable.
+
+- You don't get better by not trying.
 
 ## Differences from Cogan's lectures
 
