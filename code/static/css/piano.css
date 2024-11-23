@@ -1,3 +1,101 @@
+body {
+    margin: 0;
+}
+
+.modals {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modals.hidden {
+    display: none;
+}
+
+.modals .modal {
+    display: none;
+    padding: 3vh 10%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.modals .modal.shown {
+    display: block;
+}
+
+.modals .selection a {
+    display: block;
+    font-size: 3vh;
+    margin: 0;
+    padding: 2vh 0%;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000;
+    transition: color .25s ease;
+}
+
+.modals .selection a:hover {
+    color: rgb(0, 191, 255);
+}
+
+.modals .end {
+    width: 20vw;
+    padding: 3vh 7.5%;
+}
+
+.modals .end h1 {
+    font-size: 4vh;
+    margin: 0vh 0% 2vh 0%;
+}
+
+.modals .end p {
+    font-size: 2vh;
+    margin: 0;
+}
+
+.modals .end .form {
+    display: none;
+    width: 100%;
+    margin: 5vh 0% 2vh 0%;
+    text-align: center;
+}
+
+.modals .end .form.shown {
+    display: block;
+}
+
+.modals .end .form label {
+    display: block;
+    font-size: 1.75vh;
+    margin-bottom: 1vh;
+    text-align: left;
+}
+
+.modals .end .form input[type=text] {
+    display: block;
+    width: 95%;
+    font-size: 1.6vh;
+    padding: .25vh 2%;
+}
+
+.modals .end .form .submit {
+    margin-top: 3vh;
+}
+
+.modals .end .form .submit a {
+    padding: 1vh 5%;
+    background-color:#008700;
+    cursor: pointer;
+    border-radius: .2vh;
+    color: #fff;
+    font-weight: 500;
+}
+
 .content {
     display: flex;
     width: 100%;
@@ -5,6 +103,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .piano {
     display: flex;
     position: relative;

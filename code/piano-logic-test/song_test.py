@@ -3,7 +3,7 @@ import mido
 currentNote = 0
 
 # Open the MIDI file
-mid = mido.MidiFile("assets/songs/Mary Had a Little Lamb.mid")
+mid = mido.MidiFile("code/assets/songs/Mary Had a Little Lamb.mid")
 notes = []
 
 # Iterate over tracks
@@ -15,13 +15,11 @@ for i, track in enumerate(mid.tracks):
         instruction = str(msg)
         if instruction.__contains__("note_off"):
             notes.append(instruction[24:26])
-            currentNote
-            # print(instruction[24:26])
+            print(instruction[24:26])
 
 while True:
-    print("current note is " + instruction[currentNote])
-    if(input() == instruction[currentNote]):
-        pass
+    print("current note is " + notes[currentNote])
+    if(input() == notes[currentNote]):
+        currentNote += 1
     else:
         break
-    currentNote += 1

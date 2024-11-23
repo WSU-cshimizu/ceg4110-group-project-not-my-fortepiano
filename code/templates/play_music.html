@@ -2,6 +2,16 @@
 
 {% block title %}Play Music{% endblock %}
 
+{% if mode == 'freeplay' %}
+{% block selection %}
+<div class="modal selection shown">
+    {% for item in songs %}
+        <a data-name="{{ item }}">{{ item }}</a>
+    {% endfor %}
+</div>
+{% endblock %}
+{% endif %}
+
 {% block header %}
     <h1>Play Music</h1>
 {% endblock %}
