@@ -1,17 +1,17 @@
 # Group Retrospective
 
 ## What went well in the group...
-* item
+* We chose a sufficiently simple project, so we were not constantly rushed to get stuff working.
 * item
 * item
 
 ## What could have been better in the group...
-* item
+* We could have decided a team lead at the start to have the final say.
 * item
 * item
 
 ## What went well in the class...
-* item
+* The guest speakers were generally interesting.
 * item
 * item
 
