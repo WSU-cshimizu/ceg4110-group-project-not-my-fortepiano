@@ -138,7 +138,7 @@
             contentType: 'application/json',    
             data: JSON.stringify({'name': document.querySelector(".modals .modal .form input[name=name]").value}),
             success: function(data) {
-                location.reload();
+                location.href = "../../scoreboard";
             },
             error: function(xhr, textStatus, errorThrown) {
                 // Convert response into usable JavaScript data
