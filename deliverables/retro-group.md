@@ -21,4 +21,4 @@
 * We should have had a better supply of markers and erasers for the whiteboards.
 
 ## Further Comments
-* ...
+* Ideally, the professor shouldn't have conferences scheduled during the semester.
