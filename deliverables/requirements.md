@@ -54,20 +54,26 @@ Test 1.1: Verify that the user can select between Survival Mode, Play Music Mode
 Test 1.2: Ensure that each mode properly loads its respective gameplay functionality upon selection.
 
 Test-2. Gameplay Functionality
+
 • Survival Mode
+
 Test 2.1: Verify that Survival Mode starts as expected when selected from the menu.
 Test 2.2: Test the game logic in Survival Mode to ensure the player's progress is tracked correctly.
 Test 2.3: Ensure the player's score is calculated correctly based on performance in Survival Mode.
 Test 2.4: Validate that the system compares the player's score to existing high scores and prompts for name input if the score qualifies.
 Test 2.5: Confirm that when the game ends, the user can input their name and the score is added to the leaderboard.
 Test 2.6: Verify that the player can return to the main menu after the game ends.
+
 • Play Music Mode
+
 Test 2.7: Verify that Play Music Mode loads the correct song selection menu.
 Test 2.8: Ensure the user can select and play a song in Play Music Mode.
 Test 2.9: Validate that the system calculates a score based on the player's performance and accuracy.
 Test 2.10: Ensure the player is able to replay the song or return to the menu after completing the song.
 Test 2.11: Confirm that the leaderboard properly displays high scores for Play Music Mode.
+
 • Free Play Mode
+
 Test 2.12: Verify that Free Play Mode starts when selected and does not track scores.
 Test 2.13: Ensure the user can play freely without scoring and can quit the mode to return to the main menu.
 
